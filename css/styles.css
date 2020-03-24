@@ -1,50 +1,40 @@
 body {
   margin: 0;
   text-align: center;
-}
-
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  margin: 0;
-  font-size: 3em;
-}
-
-h2 {
   font-family: 'Merriweather', serif;
 }
 
+h1 {
+  font-family: 'Sacramento', cursive;
+  color: white;
+  margin: 0;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 h3 {
-  font-family: 'Courier Prime', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 div {
-  margin: 20px;
-  padding: 20px;
+  margin: 40px 0;
 }
 
-img {
-  /*margin: auto;
-  text-align: center;*/
-}
+img {}
 
 .top-container {
   background-color: #209CEE;
-  padding-top: 120px;
-  padding-bottom: 200px;
-  margin-bottom: 90px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-.middle-container {
-  margin-top: 150px;
-}
+.middle-container {}
 
 .bottom-container {}
 
-#profile-pic {
-  width: auto;
-  height: 320px;
-  position: absolute;
-  top: 293px;
-  left: 599.6px;
-}
+  .citation {
+    display: none;
+  }
