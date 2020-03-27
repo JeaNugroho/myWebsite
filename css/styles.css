@@ -1,29 +1,60 @@
 body {
   margin: 0;
   text-align: center;
+  color: #40514E;
   font-family: 'Merriweather', serif;
 }
 
 h1 {
   font-family: 'Sacramento', cursive;
-  color: white;
+  color: #d7eaea;
   margin: 0;
-  font-size: 4em;
+  font-size: 5.625rem;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #11999E;
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+}
+
+p {
+  line-height: 2;
+}
+
+span {
+  font-size: 24px;
+}
+
+hr {
+  border: dotted #D4D4D4 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+  background-color: white;
+}
+
+img {}
+
+a {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
 }
 
 div {
   margin: 40px 0;
 }
-
-img {}
 
 .top-container {
   background-color: #209CEE;
@@ -31,10 +62,70 @@ img {}
   padding-bottom: 80px;
 }
 
-.middle-container {}
+.middle-container {
+  margin: 100px 0;
+}
 
-.bottom-container {}
+.profile {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .citation {
-    display: none;
-  }
+.bottom-container {
+  background-color: #209CEE;
+  margin: 0;
+  padding: 50px 0 20px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 80px auto 80px auto;
+  text-align: justify;
+}
+
+.web-pic {
+  width: 20%;
+  float: left;
+  margin: 0 25px 0 0;
+}
+
+.mobile-pic {
+  width: 20%;
+  float: right;
+  margin: 0 0 0 25px;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.footer-link {
+  color: #d7eaea;
+}
+
+.footer-copyright {
+  color: #d7eaea;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  color: #40514E !important;
+  font-size: 22px;
+  padding: 7px 14px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  border: 2px solid #D4D4D4;
+  background: #FFFFFF;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #40514E !important;
+  background: #FFFFFF;
+  border-color: #209CEE;
+}
