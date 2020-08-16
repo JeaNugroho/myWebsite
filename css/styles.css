@@ -1,33 +1,99 @@
-body {
-  margin: 0;
-  text-align: center;
-  color: #40514E;
-  font-family: 'Merriweather', serif;
-}
+/* @media all and (min-width: 480px) { */
+  body {
+    /* margin: 0;
+    padding: 0; */
+  }
 
-h1 {
-  font-family: 'Sacramento', cursive;
-  color: #d7eaea;
-  margin: 0;
-  font-size: 5.625rem;
-}
+  h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+  }
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  color: #11999E;
-}
+  h1 {
+    font-size: 3.4rem;
+  }
 
-h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: #11999E;
-}
+  h4, h5, h6 {
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.8;
+  }
 
-p {
-  line-height: 2;
-}
+  p {
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
 
-span {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .colored-section {
+    background-color: #F5F5F5;
+    color: #505050;
+  }
+
+  .uncolored-section {
+    background-color: white;
+    color: #505050;
+  }
+
+  .title-section {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.50),
+      rgba(0, 0, 0, 0.50)
+    ), url("../images/pexels-fauxels-3183165.jpg") 0 0 no-repeat;
+    background-size: 100% auto;
+    color: white;
+  }
+
+  .intro-section {
+    text-align: justify;
+    text-align-last: center;
+  }
+
+  .programming-text {
+    font-family: "Courier Prime", monospace;
+    font-size: 1.7rem;
+  }
+
+  .table-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .project-desc-container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .project-desc-section {
+    text-align: justify;
+  }
+
+  .project-pic {
+    width: 22rem;
+    height: auto;
+  }
+
+  .profile-pic {
+    width: 10rem;
+    height: auto;
+  }
+
+  hr {
+    width: 50%;
+  }
+
+  .footer-section {
+    background-color: #3C474B;
+    color: white;
+  }
+
+
+/* } */
+
+/* span {
   font-size: 24px;
 }
 
@@ -54,9 +120,9 @@ a:hover {
 
 div {
   margin: 40px 0;
-}
+} */
 
-.top-container {
+/* .top-container {
   background-color: #209CEE;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -128,4 +194,4 @@ div {
   color: #40514E !important;
   background: #FFFFFF;
   border-color: #209CEE;
-}
+} */
