@@ -26,48 +26,174 @@
       I am an aspiring and passionate Computer Programmer from Indonesia
       focusing on Software Development/Engineering. I possess solid skills in
       <span class="programming-text">Java, JavaScript, Python, C, and C#.</span>
-      In addition to that, I am experienced in <span class="programming-text">node.js</span> utilizing technologies
-      including <span class="programming-text">React.js with Hooks, Redux, HTML, CSS, Bootstrap, Express.js, MongoDB AWS, and Serverless framework.</span>
+      In addition to that, I am experienced in <span class="programming-text">Node.js</span> utilizing technologies
+      including <span class="programming-text">React.js with Hooks, Redux, HTML, CSS, Bootstrap, Express.js, MongoDB, AWS, and Serverless framework.</span>
       Currently, I am pursuing a bachelor's degree in Computer Engineering at Purdue University.
       I expect to graduate by December 2021.
-      Hence, I'm looking for either a Summer 2021 internship or a full-time employment in the beginning of 2022.
+      Hence, I'm looking for either a Summer 2021 internship or full-time employment at the beginning of 2022.
     </h5>
   </div>
   <div class="px-2 container">
     <div class="py-5 rounded colored-section">
-      <div class="table-container">
-        <h2 class="mb-5"><strong>My Work</strong></h2>
-        <hr />
-        <!-- <div>
-        </div> -->
-        <div class="py-4 row">
-          <div class="py-auto col-lg-6">
-            <h5 class=""><strong>Fovies</strong> - <em>Forkaia</em></h5>
-            <p class="intro-section project-desc-container">
+      <div id="accordion" class="table-container">
+        <h2 class="mb-5"><strong>My Work Projects</strong></h2>
+        <hr class="table-line" />
+        <div id="headingOne" class="py-4 row project-desc-container">
+          <div class="py-auto col-lg-3 col-md-6">
+            <img class="mx-auto my-2 rounded project-pic-portrait" src="./images/fovies-homepage.jpeg" alt="fovies-ss" />
+            <!-- <img class="mx-auto rounded project-pic" src="./images/fovies-watchvideo.png" alt="fovies-ss" /> -->
+          </div>
+          <div class="py-auto col-lg-3 col-md-6">
+            <img class="mx-auto my-2 rounded project-pic-portrait" src="./images/fovies-watchvideo.jpeg" alt="fovies-ss" />
+          </div>
+          <div class="mx-auto col-md-6">
+            <h5 class="mt-3"><strong>Fovies</strong> - <em>Forkaia</em></h5>
+            <p class="intro-section">
               A responsive web application that serves as a streaming platform for super short films.
             </p>
-            <button class="mb-3 btn btn-dark">
+            <button class="mb-3 btn btn-outline-dark collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               <p class="mb-0"><strong>View Project</strong></p>
             </button>
-          </div>
-          <div class="mx-auto col-md-6">
-            <img class="mx-auto rounded project-pic" src="./images/fovies-2.png" alt="fovies-ss" />
           </div>
         </div>
-        <hr />
-        <div class="py-4 row">
+        <div id="collapseOne" class="collapse project-desc-container" aria-labelledby="headingOne" data-parent="#accordion">
+          <h6 class="py-2">
+            <span class="badge badge-secondary programming-badge">Node.js</span>
+            <span class="badge badge-secondary programming-badge">React.js</span>
+            <span class="badge badge-secondary programming-badge">React Hooks</span>
+            <span class="badge badge-secondary programming-badge">HTML</span>
+            <span class="badge badge-secondary programming-badge">CSS</span>
+            <span class="badge badge-secondary programming-badge">Bootstrap</span>
+            <span class="badge badge-secondary programming-badge">Serverless</span>
+            <span class="badge badge-secondary programming-badge">AWS</span>
+            <span class="badge badge-secondary programming-badge">Lambda</span>
+            <span class="badge badge-secondary programming-badge">API Gateway</span>
+            <span class="badge badge-secondary programming-badge">Amplify</span>
+            <span class="badge badge-secondary programming-badge">Cognito</span>
+            <span class="badge badge-secondary programming-badge">S3</span>
+            <span class="badge badge-secondary programming-badge">DynamoDB</span>
+          </h6>
+          <p class="py-1 project-desc-section">
+            Fovies is a web app that hosts and streams super short films.
+            An individual user for this application could either be an audience, a filmmaker or both at the same time.
+            In this application, filmmakers can upload and watch their own films, as well as watch other users' creation.
+            The audience, in return, can also start to produce their own films and upload them on Fovies.
+            Therefore, granting all users as both audience and filmmaker, anyone who uploads on Fovies does not necessarily have to be a professional filmmaker.
+            Users, when first using the application, must sign up and confirm the code sent to their email.
+            After being logged in, the directory of films is displayed at the home page for the audience. For any user who wants to upload their own creation, all the fields in the uploading form page should be completed. The fields include the film title, description, poster image and the actual video file itself.
+            Any one of the displayed films can be chosen and the user will be directed to a page to view this film and its details.
+            However, if the audience user is a filmmaker as well, there exists a profile page visible only to that user containing all films uploaded by that specific user.
+            These uploaded films are present in the home page and could only be altered or deleted by the user who uploaded it through their profile page.
+            <br /><br />
+
+            The application is written in JavaScript and runs in Node.js.
+            Both the frontend (React Routes) and backend (Lambda functions) routes are RESTful, communicating through API Gateway that leads to individual functions that operate individually per HTTP event as microservices.
+            The Lambda functions are built upon using AWS SDK, communicate with DynamoDB, and respond to API Gateway routes that requests for CRUD functions (Create, Read, Update, and Delete) on a user's own films, a read function that gets all movies from all users from the database for the home page, and a read function to get a film when it is clicked on the home page.
+            The implemented routes are as follows and the format is similar to the React routes developed: <br />
+            <span class="programming-badge">POST</span> /users/me/videos (upload new film)<br />
+            <span class="programming-badge">GET</span> /users/me/videos/id (get my film with the desired ID)<br />
+            <span class="programming-badge">PUT</span> /users/me/videos/id (update my film with the desired ID)<br />
+            <span class="programming-badge">DELETE</span> /users/me/videos/id (update my film with the desired ID)<br />
+            <span class="programming-badge">GET</span> users/all/videos (get all films in this application)<br />
+            <span class="programming-badge">GET</span> users/one/videos/id (get a film chosen from the home page)<br />
+            There is no sign-up or log-in function because Amplify takes care of it in the frontend side.<br />
+            <br />
+
+            The frontend, other than React and its hooks, consists of AWS Amplify that connects directly with Cognito and S3.
+            Cognito is used to maintain a directory of users and their credentials, and to authorize logged-in users to put or retrieve their own films from S3. Further, Cognito allows users to alter their own movies, but makes sure that users are only be able to watch and not alter films uploaded by other users.
+            Cognito is also used to authenticate users into Fovies by giving assigning temporary tokens to them.
+            The state for when user is authenticated is stored using React state hooks and the user's Gravatar is saved in the local storage in case of new film upload to identify the creator.
+            Forms for uploading, altering and deleting a film utilizes HTML and CSS as well.
+            They also include checks for whether the fields are filled for creation or update, or a confirmation to delete a specified film.
+            The home page has the listing of all movies retrieved from the the database, and the profile page has the listing of all the movies made by the logged-in user and a button to upload a new film.
+            <br /><br />
+
+            I worked individually to design and engineer the application during my internship.
+            <br /><br />
+
+            Date: Jul - Aug 2020<br />
+            Frontend Remote Git: <a href="https://github.com/JeaNugroho/fovies-client">fovies-client</a><br />
+            Backend Remote Git: <a href="https://github.com/JeaNugroho/fovies-api">fovies-api</a><br />
+            Demo: <a href="https://drive.google.com/file/d/1VrtK0f8teRCOkxa5tAdve08pegHLmdc3/view?usp=sharing">video</a><br />
+            Link to App: <a href="https://fovies.netlify.app/">fovies.netlify.app</a><br />
+          </p>
+        </div>
+        <hr class="table-line" />
+        <div id="headingTwo" class="py-4 row project-desc-container">
           <div class="py-auto col-lg-6">
-            <h5 class=""><strong>Side Hustle</strong> - <em>Forkaia</em></h5>
-            <p class="intro-section project-desc-container">
+            <img class="mx-auto my-2 rounded project-pic" src="./images/side-hustle-searchpage.png" alt="sidehustle-ss" />
+          </div>
+          <div class="mx-auto col-md-6">
+            <h5 class="mt-3"><strong>Side Hustle</strong> - <em>Forkaia</em></h5>
+            <p class="intro-section">
               A platform for side-money job hunters to meet talent seekers and get hustling.
             </p>
-            <button class="mb-3 btn btn-dark">
+            <button class="mb-3 btn btn-outline-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <p class="mb-0"><strong>View Project</strong></p>
             </button>
           </div>
-          <div class="mx-auto col-md-6">
-            <img class="mx-auto rounded project-pic" src="./images/fovies-2.png" alt="sidehustle-ss" />
-          </div>
+        </div>
+        <div id="collapseTwo" class="collapse project-desc-container" aria-labelledby="headingTwo" data-parent="#accordion">
+          <h6 class="py-2">
+            <span class="badge badge-secondary programming-badge">Node.js</span>
+            <span class="badge badge-secondary programming-badge">React.js</span>
+            <span class="badge badge-secondary programming-badge">React Hooks</span>
+            <span class="badge badge-secondary programming-badge">Redux</span>
+            <span class="badge badge-secondary programming-badge">HTML</span>
+            <span class="badge badge-secondary programming-badge">CSS</span>
+            <span class="badge badge-secondary programming-badge">Bootstrap</span>
+            <span class="badge badge-secondary programming-badge">Express.js</span>
+            <span class="badge badge-secondary programming-badge">MongoDB</span>
+            <span class="badge badge-secondary programming-badge">JWT</span>
+            <span class="badge badge-secondary programming-badge">Google Maps API</span>
+            <span class="badge badge-secondary programming-badge">OpenCage API</span>
+          </h6>
+          <p class="py-1 project-desc-section">
+            Side Hustle serves as a web platform for side-money job hunters to meet talent seekers.
+            Using this application, an individual user does not necessarily have to possess one specific role. They can either be talent seeker, job hunter or both at the same time.
+            For instance, one can simply market themself as a math tutor that teaches at home (job hunter) while also seeking a house cleaner to clean the common area after tutoring (talent seeker).
+            Users would have to sign up for the first time and just sign in for every other time of entry.
+            Logged-in users will be directed to the dashboard page, where the user can create, edit or delete their profile. The resulting profile will be what other people see publicly when they search for talents.
+            There is only a create profile button if the person has not created a profile. Otherwise, there will be an edit profile button and a delete account button.
+            The create profile button and edit profile button will direct to a form with validations to fill out specific necessary information.
+            Another tab in this application is the search page which is used to seek talents.
+            To search for talents, enter the talent name in the search bar. Then, a list of job hunter profiles will be displayed after the search bar.
+            Clicking on one of the listed profiles would bring the current user to the profile page display of the clicked profile.
+            The page would have a small form to rate a profile once and a button that directs to a Google Maps top-view of the profile's location.
+            <br /><br />
+
+            The application makes use of the MERN stack (MongoDB, Express.js, React.js, Node.js) with an addition of Redux to maintain a frontend state.
+            The Express app maintains the server and responds to user authentication, profile and user directory routes.
+            For user authentication, JSON Web Token is utilized to sign and provide tokens upon logging-in, and to grant access when successfully logged-in.
+            The following are the API routes and that connects with MongoDB:<br />
+            <span class="programming-badge">POST</span> /api/users (sign user up)<br />
+            <span class="programming-badge">GET</span> /api/auth (authenticate user into app and return token to frontend state)<br />
+            <span class="programming-badge">POST</span> /api/auth (sign user in)<br />
+            <span class="programming-badge">GET</span> /api/profile/me (get logged-in user's profile)<br />
+            <span class="programming-badge">POST</span> /api/profile (create or update logged-in user's profile)<br />
+            <span class="programming-badge">GET</span> /api/profile/skill (get all profiles with the desired skill)<br />
+            <span class="programming-badge">GET</span> /api/profile/user/:userId (get a profile by user ID)<br />
+            <span class="programming-badge">DELETE</span> api/profile (delete logged-in user's account, both profile and user)<br />
+            <span class="programming-badge">PUT</span> /api/profile/rate/id (rate a profile)<br />
+            The React app routes are similar, only that there is no rate routes (rating is within a profile page).
+            The OpenCage API is a geocoder that translates the address given when creating a profile into a geocode, which is stored with the profile in the database.
+            The Gravatar of a user is also stored together with the profile to be displayed as the profile picture in the search page
+            <br /><br />
+
+            The frontend uses React with hooks, HTML and CSS to display and operate frontend routes.
+            Redux holds the app state, which includes the token in terms of user credentials, the current displayed profile and the profile list in the search page.
+            When frontend functions call the backend routes or the form is invalid, the Redux state is altered and is flushed to React components (Bootstrap alerts for invalid forms).
+            A call to Google Maps API is invoked by the map component when the users clicks on the map button in a profile.
+            <br /><br />
+
+            I worked individually to design and engineer the application during my internship.
+            <br /><br />
+
+            Date: Jun - Jul 2020<br />
+            Full-Stack Remote Git: <a href="https://github.com/JeaNugroho/side-hustle">side-hustle</a><br />
+            Demo: <a href="https://drive.google.com/file/d/1v5tqYPNmx3nCyiHsJMKeO-hqOanYhE8c/view?usp=sharing">video</a><br />
+            Link to App: <a href="https://enthousiaste-madame-62984.herokuapp.com/">enthousiaste-madame-62984.herokuapp.com</a><br />
+          </p>
         </div>
       </div>
     </div>

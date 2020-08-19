@@ -57,6 +57,12 @@
     font-size: 1.7rem;
   }
 
+  .programming-badge {
+    font-family: "Courier Prime", monospace;
+    font-weight: lighter;
+    font-size: 1.1rem;
+  }
+
   .table-container {
     padding-left: 2%;
     padding-right: 2%;
@@ -73,6 +79,11 @@
 
   .project-pic {
     width: 22rem;
+    height: auto;
+  }
+
+  .project-pic-portrait {
+    width: 10rem;
     height: auto;
   }
 
